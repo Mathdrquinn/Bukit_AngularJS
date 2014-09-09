@@ -1,0 +1,41 @@
+body {
+  background-color: lightgray;
+  color: teal; }
+
+header, footer {
+  background-color: #008080;
+  color: lightgrey; }
+  header li, footer li {
+    display: inline-block;
+    position: relative; }
+    header li a, footer li a {
+      position: relative;
+      padding: 5px;
+      text-decoration: none;
+      color: lightgrey;
+      webkit-transition: 0.3s; }
+      header li a:hover, footer li a:hover {
+        background-color: rgba(0, 220, 220, 0.5); }
+
+.hockeyList li {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  width: 30%;
+  border-radius: 3px;
+  list-style-type: none;
+  margin: 5px;
+  height: 350px;
+  overflow: hidden; }
+  .hockeyList li h3 {
+    margin-bottom: 0; }
+  .hockeyList li h5 {
+    margin-top: 0; }
+.hockeyList ul .odd {
+  background-color: #ffffff; }
+.hockeyList ul .even {
+  background-color: rgba(0, 0, 0, 0.1); }
+.hockeyList .cost {
+  color: #000000; }
+  .hockeyList .cost:hover {
+    background-color: rgba(0, 0, 0, 0.5); }

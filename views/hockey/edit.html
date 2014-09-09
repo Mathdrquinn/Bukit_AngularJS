@@ -1,0 +1,18 @@
+<div class="editBox">
+    <h2>Modify Team</h2>
+    <form action="" ng-submit="editItem(singleItem)">
+        <div class="editLeft">
+            <h3><input type="text" ng-model="singleItem.item" value="singleItem.item"/></h3>
+            <h5><input type="text" ng-model="singleItem.location" value="singleItem.location"/></h5>
+            <p><textarea name="about" id="" cols="30" rows="10"ng-model="singleItem.about">{{singleItem.about}}</textarea></p>
+            <p><input type="number" ng-model="singleItem.cost" value="singleItem.cost"/></p>
+
+        </div>
+
+        <div class="editRight">
+            <img style="width:80px" src="{{singleItem.logo}}" alt="Team Logo"/>
+            <input type="text" placeholder="Image Url"/>
+        </div>
+        <button type=""submit">Apply Changes</button>
+    </form>
+</div>

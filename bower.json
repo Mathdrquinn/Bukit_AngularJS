@@ -1,0 +1,17 @@
+{
+  "name": "bukit",
+  "version": "0.0.0",
+  "keywords": [
+    "angular_services_demo"
+  ],
+  "authors": [
+    "Brendan Quinn <quinn.197@gmail.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.2.23",
+    "angular-route": "~1.2.23",
+    "restangular": "~1.4.0",
+    "ui.bootstrap": "~0.11.0"
+  }
+}

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bukit</title>
+    <link rel="stylesheet" href="pocket/ui.bootstrap/docs/css/style.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body ng-app="brendan-ng-features">
+
+    <header>
+        <ul>
+            <li><a href="#/">Home</a></li>
+            <li><a href="#/hockey">Hockey</a></li>
+            <li><a href="#/hats">Hats</a></li>
+            <li><a href="">Thing 2</a></li>
+        </ul>
+    </header>
+
+    <h1>BOOOOYAAAAHHH!</h1>
+    <div class="container">
+        <div class="viewBox" ng-view></div>
+    </div>
+
+    <footer>
+        <ul>
+            <li><a href="#/">Home</a></li>
+            <li><a href="#/hockey">Hockey</a></li>
+            <li><a href="#/hats">Hats</a></li>
+            <li><a href="">Thing 2</a></li>
+        </ul>
+    </footer>
+
+<!-- pocket scripts -->
+    <script src="pocket/angular/angular.min.js"></script>
+    <script src="pocket/angular-route/angular-route.min.js"></script>
+    <script src="pocket/lodash/dist/lodash.min.js"></script>
+    <script src="pocket/restangular/dist/restangular.min.js"></script>
+
+
+<!-- general scripts -->
+    <script src="js/app.js"></script>
+
+
+<!-- hockey scripts -->
+    <script src="js/hockey/hockey.js"></script>
+    <script src="js/hockey/hockeySvc.js"></script>
+    <script src="js/hockey/hockeyCtrl.js"></script>
+
+<!-- hockey scripts -->
+    <script src="js/hats/hats.js"></script>
+    <script src="js/hats/hatsSvc.js"></script>
+    <script src="js/hats/hatsCtrl.js"></script>
+
+
+<!-- http scripts -->
+
+
+<!-- restangular scripts -->
+
+<!-- controllers -->
+    <script src="js/homeCtrl.js"></script>
+
+</body>
+</html>

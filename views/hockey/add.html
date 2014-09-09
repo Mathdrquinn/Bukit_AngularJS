@@ -1,0 +1,9 @@
+<span ng-init="newItem={}"></span>
+<form ng-submit="addItem(newItem)">
+    <input type="text" placeholder="Team's Name" ng-model="newItem.item" required="required"/>
+    <input type="text" placeholder="Team's Locaiton" ng-model="newItem.location"/>
+    <textarea cols="30" rows="10" ng-model="newItem.about">About...</textarea>
+    <input type="number" placeholder="$$$" ng-model="newItem.cost"/>
+    <input type="text" placeholder="logo image url address" ng-model="newItem.logo"/>
+    <button type="submit">Create Expansion Team</button>
+</form>

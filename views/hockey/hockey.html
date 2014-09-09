@@ -1,0 +1,18 @@
+<h2>Listed Teams</h2>
+
+<div class="hockeyList">
+    <ul>
+        <li ng-repeat="i in inventory" ng-class-odd="'odd'" ng-class-even="'even'">
+            <h3>{{i.item}}</h3>
+            <h5>{{i.location}}</h5>
+            <img style="width: 100px; border-radius: 3px" src="{{i.logo}}" alt="" + i.item + "\'s team logo"/>
+            <p class="about">{{i.about}}</p>
+            <p class="cost">{{i.cost | currency}}</p>
+
+            <button><a href="#/hockey/{{$index}}/modify">Modify Team</a></button>
+            <button ng-click="removeItem($index)">Mark as Offensive</button>
+        </li>
+    </ul>
+</div>
+
+<button ng-click="goToAdd()">Add Team</button>
