@@ -2,18 +2,18 @@
 
 <div class="hockeyList">
     <ul>
-        <li ng-repeat="i in inventory" ng-class-odd="'odd'" ng-class-even="'even'">
+        <li ng-repeat="i in items" ng-class-odd="'odd'" ng-class-even="'even'">
             <h3>({{i.quantity}}) {{i.item}}</h3>
             <h5>{{i.location}}</h5>
             <img style="width: 100px; border-radius: 3px" src="{{i.logo}}" alt="" + i.item + "\'s team logo"/>
             <p class="about">{{i.about}}</p>
             <p class="cost">{{i.cost | currency}}</p>
 
-            <button><a href="#/hockey/{{$index}}/modify">Modify Team</a></button>
-            <button ng-click="removeItem($index)">Mark as Offensive</button>
+            <!--<button><a href="#/hockey/{{$index}}/modify">Modify Team</a></button>-->
+            <!--<button ng-click="removeItem($index)">Mark as Offensive</button>-->
             <br/>
             <button ng-click="addToCart(i)">+ cart</button>
-            <button><a href="#/hockey/{{$index}}/review">Rate and Review this Item</a></button>
+            <button><a href="#/httpHockey/{{i._id}}/review">Rate and Review this Item</a></button>
         </li>
     </ul>
 </div>

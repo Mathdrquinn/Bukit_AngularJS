@@ -1,0 +1,10 @@
+not angular
+
+<p>{{thingy}}</p>
+
+<ul>
+    <li ng-repeat="thing in bigCart">
+        ({{thing.cartQuantity.toString()}}) {{thing.item}}
+        <p>Total Cost: {{thing.cartQuantity*thing.cost | currency}}</p>
+    </li>
+</ul>

@@ -1,5 +1,8 @@
 angular.module("brendan-ng-features",
-    [   "brendan-hockey",
+    [   "brendan-httpHockey",
+        "brendan-httpCart",
+        "brendan-cart",
+        "brendan-hockey",
         "brendan-hats",
         "ngRoute"
     ])
@@ -10,6 +13,11 @@ angular.module("brendan-ng-features",
     .when('/', {
             templateUrl: 'views/home.html',
             contorller: 'homeCtrl'
+    })
+    .when("/adminRights",
+    {
+        templateUrl: "views/adminRights.html",
+        controller: "httpHockeyCtrl"
     })
     .otherwise( {
         redirectTo: "/"

@@ -1,0 +1,21 @@
+<h2>Your Cart</h2>
+
+<div class="CartList">
+    <ul>
+        <li ng-repeat="i in cartItems" ng-class-odd="'odd'" ng-class-even="'even'">
+            <h3>({{i.cartQuantity.toString()}}) {{i.item}}</h3>
+            <img style="width: 100px; border-radius: 3px" src="{{i.logo}}" alt="" + i.item + "\'s team logo"/>
+            <p class="about">{{i.about}}</p>
+            <p class="cost">Individual Cost: {{i.cost | currency}}</p>
+            <p>Total Cost: {{Number(thing.cartQuantity)*Number(thing.cost) | currency}} for {{i.cartQuantity.toString()}}</p>
+
+            <!--<button><a href="#/hockey/{{$index}}/modify">Modify Team</a></button>-->
+            <!--<button ng-click="removeItem($index)">Mark as Offensive</button>-->
+            <br/>
+            <button ng-click="addToCart(i)">+ cart</button>
+            <button><a href="#/httpHockey/{{i._id}}/review">Rate and Review this Item</a></button>
+        </li>
+    </ul>
+</div>
+
+<button ng-click="goToAdd()">Add Team</button>

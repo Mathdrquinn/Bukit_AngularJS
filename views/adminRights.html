@@ -1,0 +1,27 @@
+<h2>You are an Administrator, Use your powers to administrate</h2>
+<p>
+<form action="" ng-submit="addItem(newItem)">
+    <label for="item"> Item Name
+        <input type="text" name="item" id="item" ng-model="newItem.item"/>
+    </label>
+    <label for="type"> Type
+        <input type="text" name="type" id="type" ng-model="newItem.type"/>
+    </label>
+    <br/>
+    <label for="quantity"> Quantity
+        <input type="number" name="quantity" id="quantity" ng-model="newItem.quantity"/>
+    </label>
+    <label for="location"> Locaiton
+        <input type="text" name="location" id="location" ng-model="newItem.location"/>
+    </label>
+    <br/>
+    <label for="logo"> Picture Url
+        <input type="text" name="logo" id="logo" ng-model="newItem.logo"/>
+    </label>
+    <label for="cost"> Enter Price
+        <input type="number" name="cost" id="cost" ng-model="newItem.cost"/>
+    </label>
+    <p><textarea name="about" id="" cols="30" rows="10" ng-model="newItem.about"></textarea></p>
+    <button type="submit">Submit to Inventory</button>
+</form>
+</p>
