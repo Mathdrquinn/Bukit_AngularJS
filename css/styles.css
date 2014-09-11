@@ -2,6 +2,9 @@ body {
   background-color: lightgray;
   color: teal; }
 
+a {
+  color: #000000; }
+
 header, footer {
   background-color: #008080;
   color: lightgrey; }
