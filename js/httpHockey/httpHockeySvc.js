@@ -1,7 +1,7 @@
 angular.module("brendan-httpHockey")
 .factory("httpHockeySvc", function($http, $rootScope, $log) {
 
-    var urlBase = "http://tiy-fee-rest.herokuapp.com/collections/itemsUrl";
+    var urlBase = "http://tiy-fee-rest.herokuapp.com/collections/items3Url";
 
     var getItems = function () {
         return $http.get(urlBase);

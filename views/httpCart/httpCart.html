@@ -7,12 +7,12 @@
             <img style="width: 100px; border-radius: 3px" src="{{i.logo}}" alt="" + i.item + "\'s team logo"/>
             <p class="about">{{i.about}}</p>
             <p class="cost">Individual Cost: {{i.cost | currency}}</p>
-            <p>Total Cost: {{Number(thing.cartQuantity)*Number(thing.cost) | currency}} for {{i.cartQuantity.toString()}}</p>
+            <p>Total Cost: {{(i.cost * i.cartQuantity) | currency}} for {{i.cartQuantity.toString()}}</p>
 
             <!--<button><a href="#/hockey/{{$index}}/modify">Modify Team</a></button>-->
             <!--<button ng-click="removeItem($index)">Mark as Offensive</button>-->
             <br/>
-            <button ng-click="addToCart(i)">+ cart</button>
+            <button ng-click="editCartItem(i)">+ cart</button>
             <button><a href="#/httpHockey/{{i._id}}/review">Rate and Review this Item</a></button>
         </li>
     </ul>

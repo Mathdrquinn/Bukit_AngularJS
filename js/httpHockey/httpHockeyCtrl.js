@@ -5,17 +5,30 @@ angular.module("brendan-httpHockey")
 
         $scope.addToCart = function(item) {
             if(item.cartStatus === false) {
-
+                $log.info("1");
+                $log.info(item.cartStatus);
+                $log.info(item.cartQuantity);
                 item.cartStatus = true;
                 item.quantity--;
                 item.cartQuantity++;
                 $scope.editItem(item);
+                var fakeItem = {
+                    item: item.item,
+                    type: item.tpye,
+                    cartQuantity: item.cartQuantity,
+                    thoughts: item.thoughts,
+                    locaiton: item.locaiton,
+                    logo: item.logo,
+                    about: item.about,
+                    cost: item.cost
+                }
 
-                httpCartSvc.addToCart(item).then(function (response) {
-                    $log.info("passed in item: " + item);
+
+                httpCartSvc.addToCart(fakeItem).then(function (response) {
+                    $log.info("passed in item: " + fakeItem);
                     $log.info("newItem: " + $scope.newItem);
                     $scope.newItem = $scope.blankItem;
-                    $log.info("item after clearing values: " + item);
+                    $log.info("item after clearing values: " + fakeItem);
                     $log.info("newItem after clearing values: " + $scope.newItem);
 
                     //$location.path("/httpHockey");
@@ -24,19 +37,39 @@ angular.module("brendan-httpHockey")
                 return
             }
             else if(item.quantity == "0") {
+                $log.info("2");
+                $log.info(item.cartStatus);
+                $log.info(item.cartQuantity);
                 alert("Out of stock!");
                 return
             }
             else if (item.cartStatus === true && item.quantity > 0) {
 
+                $log.info("3");
+                $log.info(item.cartStatus);
+                $log.info(item.cartQuantity);
                 item.quantity--;
                 item.cartQuantity++;
+                $log.info(item._id)
                 $scope.editItem(item);
-                $scope.editCartItem(item)
+                var fakeItem = {
+                    item: item.item,
+                    type: item.tpye,
+                    cartQuantity: item.cartQuantity,
+                    thoughts: item.thoughts,
+                    locaiton: item.locaiton,
+                    logo: item.logo,
+                    about: item.about,
+                    cost: item.cost
+                }
+                $scope.editCartItem(fakeItem);
                 return
 
             }
             else {
+                $log.info("4");
+                $log.info(item.cartStatus);
+                $log.info(item.cartQuantity);
                 $log.info("i don\'t know how we got here");
             }
         };
@@ -130,6 +163,7 @@ angular.module("brendan-httpHockey")
         };
 
         $scope.editItem = function(item) {
+            $log.info("item is edited");
             httpHockeySvc.updateItem(item).then(function(response) {
                 //$location.path("/httpHockey");
             });

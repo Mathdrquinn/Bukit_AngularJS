@@ -3,17 +3,8 @@
 <div class="hockeyList">
     <ul>
         <li ng-repeat="i in items" ng-class-odd="'odd'" ng-class-even="'even'">
-            <h3>({{i.quantity}}) {{i.item}}</h3>
-            <h5>{{i.location}}</h5>
-            <img style="width: 100px; border-radius: 3px" src="{{i.logo}}" alt="" + i.item + "\'s team logo"/>
-            <p class="about">{{i.about}}</p>
-            <p class="cost">{{i.cost | currency}}</p>
-
-            <!--<button><a href="#/hockey/{{$index}}/modify">Modify Team</a></button>-->
-            <!--<button ng-click="removeItem($index)">Mark as Offensive</button>-->
-            <br/>
-            <button ng-click="addToCart(i)">+ cart</button>
-            <button><a href="#/httpHockey/{{i._id}}/review">Rate and Review this Item</a></button>
+            <!-- directive goes here -->
+            <inventory-directive name="{{i.item}}" place="{{i._id}}" location="{{i.location}}" quantity="{{i.quantity}}" cost="{{i.cost}}" logo="{{i.logo}}" about="{{i.about}}"></inventory-directive>
         </li>
     </ul>
 </div>

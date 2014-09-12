@@ -4,32 +4,32 @@
     <meta charset="UTF-8">
     <title>Bukit</title>
     <link rel="stylesheet" href="pocket/ui.bootstrap/docs/css/style.css"/>
+    <link rel="stylesheet" href="pocket/bootstrap/dist/css/bootstrap.css"/>
     <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body ng-app="brendan-ng-features">
 
     <header>
         <ul>
-            <li><a href="#/">Home</a></li>
-            <li><a href="#/hockey">Hockey</a></li>
-            <li><a href="#/hats">Hats</a></li>
-            <li><a href="#/httpHockey">httpHockey</a></li>
+            <li><a href="#/"><button class="btn yellow">Home</button></a></li>
+            <li><a href="#/hockey"><button class="btn yellow">Hockey</button></a></li>
+            <li><a href="#/hats"><button class="btn yellow">Blank</button></a></li>
+            <li><a href="#/httpHockey"><button class="btn yellow">httpHockey</button></a></li>
+            <li><a href="#/httpCart"><button class="btn yellow">Cart</button></a></li>
         </ul>
     </header>
-
-    <h1>BOOOOYAAAAHHH!</h1>
-    <a href="#/cart"> << cart </a>
-    <a href="#/httpCart"> << httpCart </a>
     <div class="container">
         <div class="viewBox" ng-view></div>
     </div>
 
     <footer>
         <ul>
-            <li><a href="#/">Home</a></li>
-            <li><a href="#/hockey">Hockey</a></li>
-            <li><a href="#/hats">Hats</a></li>
-            <li><a href="#/httpHockey">httpHockey</a></li>
+            <li><a href="#/"><button class="btn yellow">Home</button></a></li>
+            <li><a href="#/hockey"><button class="btn yellow">Hockey</button></a></li>
+            <li><a href="#/hats"><button class="btn yellow">Blank</button></a></li>
+            <li><a href="#/httpHockey"><button class="btn yellow">httpHockey</button></a></li>
+            <li><a href="#/httpCart"><button class="btn yellow">Cart</button></a></li>
+        </ul>
         </ul>
     </footer>
 
@@ -42,6 +42,8 @@
 
 <!-- general scripts -->
     <script src="js/app.js"></script>
+    <script src="js/directives.js"></script>
+    <script src="pocket/angular-bootstrap/ui-bootstrap.min.js"></script>
 
 
 <!-- hockey scripts -->

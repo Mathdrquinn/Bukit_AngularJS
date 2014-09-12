@@ -4,6 +4,7 @@ angular.module("brendan-ng-features",
         "brendan-cart",
         "brendan-hockey",
         "brendan-hats",
+        "app.directives",
         "ngRoute"
     ])
 .config(function ($routeProvider) {

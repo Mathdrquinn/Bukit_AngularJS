@@ -1,7 +1,7 @@
 angular.module("brendan-httpCart")
     .factory("httpCartSvc", function($http, $rootScope, $log) {
 
-        var urlBase = "http://tiy-fee-rest.herokuapp.com/collections/cart";
+        var urlBase = "http://tiy-fee-rest.herokuapp.com/collections/Cart";
 
         var getCart = function () {
             return $http.get(urlBase);
@@ -13,6 +13,7 @@ angular.module("brendan-httpCart")
         };
 
         var addToCart = function (item) {
+            delete item._id;
             return $http.post(urlBase, item).then(function(repsonse) {
                 $rootScope.$broadcast("item:addedToCartUrl");
                 $log.info("item:addedToCartUrl");

@@ -30,6 +30,7 @@ angular.module("brendan-httpCart")
         };
 
         $scope.editCartItem = function(item) {
+            item.cartQuantity++;
             httpCartSvc.updateCartItem(item).then(function(response) {
                 $location.path("/httpHockey");
             });
